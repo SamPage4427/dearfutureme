@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Alemendra Display";
+  src: url("../vendor/fonts/AlemendraDisplay-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Wallpoet-Regular";
+  src: url("../vendor/fonts/Wallpoet-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mina-Regular";
+  src: url("../vendor/fonts/Mina-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Mina-Bold";
+  src: url("../vendor/fonts/Mina-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Tourney-Regular";
+  src: url("../vendor/fonts/Tourney-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Tourney-Italic";
+  src: url("../vendor/fonts/Tourney-Italic.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Tourney-Bold";
+  src: url("../vendor/fonts/Tourney-Bold.ttf");
+  font-weight: 700;
+}
