@@ -35,11 +35,14 @@ function LetterRoute() {
         </div>
         <Form.TextArea
           labelText={"Future Letter"}
-          defaultValue={"Dear future me, "}
-          className={""}
+          defaultValue={"Dear future me, \r\n"}
+          className={"w-[900px]"}
           id={"letterContent"}
         />
-        <Form.Submit title={"Send it!"} className={""} />
+        <Form.Submit
+          title={"Send it!"}
+          className={"mt-6 w-[500px] rounded-lg"}
+        />
       </Form>
       <Footer />
     </div>

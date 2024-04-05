@@ -1,8 +1,13 @@
-# React + Vite
+# Dear Future Me Project:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+The idea is simple. Send a letter to your future self that details all the achievements, accomplishments, or goals that you have for the year. You can take notes throughout the year to track your progress and even include them in another future letter to show off to yourself.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application allows users to:
+- Sign up and Login to their accounts
+- Write and send a letter to themselves on a specific date
+- Create notes to keep track of their accomplishments/achievements/goals
+- See a timeline with their progress (notes/letters)
+- Notifies a user of ...
+

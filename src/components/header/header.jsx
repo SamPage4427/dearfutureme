@@ -6,6 +6,7 @@ import { useModals } from "../../hooks/use-modal";
 import Modal from "../modals/modal";
 import { LoginModal } from "../modals/login-modal";
 import { SignUpModal } from "../modals/signup-modal";
+import { NotesModal } from "../modals";
 
 const Header = ({ className, children, ...rest }) => {
   return (
@@ -28,32 +29,48 @@ Header.Logo = () => {
 };
 
 Header.NavLinks = () => {
+  const { registerModal, openModal } = useModals();
+
   const navLinks = [
     { name: "Write Letter", link: "/letter" },
-    { name: "Notes", onClick: () => {} },
+    {
+      name: "Write Note",
+      onClick: () => {
+        openModal("notes");
+      },
+    },
     { name: "Review", link: "/year-review" },
   ];
 
   const buttons = [
     {
       title: "Log In",
-      src: "",
       onClick: () => {
-        openModal("modal");
+        openModal("login");
       },
     },
     {
       title: "Sign Up",
-      src: "",
-      onClick: () => {},
+      onClick: () => {
+        openModal("signup");
+      },
     },
   ];
 
+  useEffect(() => {
+    registerModal("notes", <NotesModal />);
+  }, []);
+
   return (
-    <nav className="flex justify-between w-[650px] font-minaBold text-3xl items-center text-center">
+    <nav className="flex justify-evenly w-[650px] font-minaBold text-3xl items-center text-center">
       {navLinks.map((link) => {
         return (
-          <Link to={link.link} key={link.name} className="hover:text-slate-500">
+          <Link
+            to={link.link}
+            key={link.name}
+            onClick={link.onClick}
+            className="hover:text-slate-500"
+          >
             {link.name}
           </Link>
         );
@@ -66,11 +83,11 @@ Header.NavLinks = () => {
 
 Header.Profile = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const { registerModal, openModal, closeModal } = useModals();
+  const { registerModal, openModal } = useModals();
 
   useEffect(() => {
-    registerModal("login", <LoginModal onClose={closeModal} />);
-    registerModal("signup", <SignUpModal onClose={closeModal} />);
+    registerModal("login", <LoginModal />);
+    registerModal("signup", <SignUpModal />);
   }, []);
 
   const buttons = [

@@ -45,7 +45,7 @@ Form.TextArea = ({
   ...rest
 }) => {
   return (
-    <div className="text-2xl font-minaRegular flex flex-col w-[900px]">
+    <div className="text-2xl font-minaRegular flex flex-col">
       <label htmlFor={id}>{labelText}</label>
       <textarea
         register={register}
