@@ -5,7 +5,7 @@ export const NotesModal = () => {
   return (
     <div>
       <Modal title="Write Note">
-        <Form className={"flex flex-col items-center m-6"}>
+        <Form className={"flex flex-col items-center m-6"} onSubmit={() => {}}>
           <Form.TextInput
             labelText={"Note Title"}
             className={"mb-5"}

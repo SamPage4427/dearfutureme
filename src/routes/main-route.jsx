@@ -4,8 +4,16 @@ import dearFuture from "../images/DearFutureMeImage.png";
 import Button from "../components/button/button";
 
 import { TypeAnimation } from "react-type-animation";
+import { useModals } from "../hooks/use-modal";
+import { useEffect } from "react";
+import { SignUpModal } from "../components/modals";
 
 function MainRoute() {
+  const { registerModal, openModal } = useModals();
+
+  useEffect(() => {
+    registerModal("signup", <SignUpModal />);
+  }, []);
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-600 via-blue-300 to-white px-10 py-6">
       <Header className="p-0 flex justify-between border-b-2 border-b-black">
@@ -61,9 +69,14 @@ function MainRoute() {
           {/* button for signup if not logged in ? button to write letter which is link to letter page */}
           <Button
             variant={"link"}
-            className={"font-minaRegular text-2xl"}
+            className={
+              "font-minaRegular text-2xl hover:text-slate-500 hover:border-slate-500"
+            }
             title="Sign up"
             size="link"
+            onClick={() => {
+              openModal("signup");
+            }}
           />
         </div>
       </div>

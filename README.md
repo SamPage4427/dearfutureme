@@ -9,5 +9,5 @@ This application allows users to:
 - Write and send a letter to themselves on a specific date
 - Create notes to keep track of their accomplishments/achievements/goals
 - See a timeline with their progress (notes/letters)
-- Notifies a user of ...
+- Notifies a user of upcoming letter delivery/new letter writing date
 

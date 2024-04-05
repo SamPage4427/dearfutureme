@@ -16,7 +16,7 @@ export const LoginModal = ({ onClose }) => {
     <Modal title={"Log In"}>
       <Form
         className={"flex flex-col items-center justify-center my-7"}
-        // onSubmit={""}
+        onSubmit={() => {}}
       >
         <Form.TextInput labelText={"Email"} type={"email"} className="mb-5" />
         <Form.TextInput
