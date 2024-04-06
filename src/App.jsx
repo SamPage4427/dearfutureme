@@ -4,7 +4,7 @@ import LetterRoute from "./routes/letter-route";
 import ProtectedRoute from "./components/protected-route";
 import ProfileRoute from "./routes/profile-route";
 import { ModalProvider } from "./contexts/modal";
-import { LoginModal } from "./components/modals/login-modal";
+import ReviewRoute from "./routes/review-route";
 
 function App() {
   return (
@@ -13,10 +13,10 @@ function App() {
         <Routes>
           <Route path="/" element={<MainRoute />} />
           <Route path="/letter" element={<LetterRoute />} />
+          <Route path="/year-review" element={<ReviewRoute />} />
           {/* <ProtectedRoute>
           <Route path="/profile" element={<ProfileRoute />} />
         </ProtectedRoute> */}
-          <Route path="/modal" element={<LoginModal />} />
         </Routes>
       </BrowserRouter>
     </ModalProvider>
