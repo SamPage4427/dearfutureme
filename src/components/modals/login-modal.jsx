@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
 import Modal from "./modal";
 import Form from "../form/form";
 import Button from "../button/button";
 import { SignUpModal } from "./signup-modal";
 import { useModals } from "../../hooks/use-modal";
 
-export const LoginModal = ({ onClose }) => {
-  const { registerModal, openModal } = useModals();
-
-  useEffect(() => {
-    registerModal("signup", <SignUpModal onClose={onClose} />);
-  }, []);
+export const LoginModal = () => {
+  const { openModal } = useModals();
 
   return (
     <Modal title={"Log In"}>
@@ -36,7 +31,7 @@ export const LoginModal = ({ onClose }) => {
             size="link"
             variant="link"
             onClick={() => {
-              openModal("signup");
+              openModal(<SignUpModal />);
             }}
             className={
               "font-minaBold hover:text-slate-500 hover:border-slate-500"

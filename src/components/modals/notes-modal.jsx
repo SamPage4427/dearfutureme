@@ -15,6 +15,7 @@ export const NotesModal = () => {
             labelText={"Content"}
             className={"w-[350px] min-h-[140px] h-[140px] max-h-[400px] mb-5"}
             placeholder={"I achieved my goal..."}
+            maxLength={500}
           />
           <Form.Submit title={"Create"} className={"w-[350px] rounded-lg"} />
         </Form>

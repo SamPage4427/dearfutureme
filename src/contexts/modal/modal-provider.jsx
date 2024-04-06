@@ -2,25 +2,20 @@ import { useState } from "react";
 import { ModalContext } from "./modal-context";
 
 export const ModalProvider = ({ children }) => {
-  const [modalName, setModalName] = useState(null);
-  const [modals, setModals] = useState();
+  const [modalContent, setModalContent] = useState(null);
 
-  const registerModal = (modalName, Component) => {
-    setModals((prev) => ({ ...prev, [modalName]: Component }));
-  };
-
-  const openModal = (modalName) => {
-    setModalName(modalName);
+  const openModal = (modalElement) => {
+    setModalContent(modalElement);
   };
 
   const closeModal = () => {
-    setModalName("");
+    setModalContent(null);
   };
 
   return (
-    <ModalContext.Provider value={{ registerModal, openModal, closeModal }}>
-      {modalName && modals[modalName]}
+    <ModalContext.Provider value={{ openModal, closeModal }}>
       {children}
+      {modalContent}
     </ModalContext.Provider>
   );
 };

@@ -42,6 +42,7 @@ Form.TextArea = ({
   placeholder,
   defaultValue,
   register,
+  maxLength,
   ...rest
 }) => {
   return (
@@ -54,8 +55,8 @@ Form.TextArea = ({
         defaultValue={defaultValue}
         type="text"
         minLength={2}
-        maxLength={500}
-        className={`h-[500px] border border-black p-2.5 rounded-lg ${className}`}
+        maxLength={maxLength}
+        className={`border border-black p-2.5 rounded-lg ${className}`}
         {...rest}
       />
     </div>

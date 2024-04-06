@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BellIcon, BellAlertIcon } from "@heroicons/react/24/outline";
 import Button from "../button/button";
@@ -29,14 +29,14 @@ Header.Logo = () => {
 };
 
 Header.NavLinks = () => {
-  const { registerModal, openModal } = useModals();
+  const { openModal } = useModals();
 
   const navLinks = [
     { name: "Write Letter", link: "/letter" },
     {
       name: "Write Note",
       onClick: () => {
-        openModal("notes");
+        openModal(<NotesModal />);
       },
     },
     { name: "Review", link: "/year-review" },
@@ -46,20 +46,16 @@ Header.NavLinks = () => {
     {
       title: "Log In",
       onClick: () => {
-        openModal("login");
+        openModal(<LoginModal />);
       },
     },
     {
       title: "Sign Up",
       onClick: () => {
-        openModal("signup");
+        openModal(<SignUpModal />);
       },
     },
   ];
-
-  useEffect(() => {
-    registerModal("notes", <NotesModal />);
-  }, []);
 
   return (
     <nav className="flex justify-evenly w-[650px] font-minaBold text-3xl items-center text-center">
@@ -83,25 +79,20 @@ Header.NavLinks = () => {
 
 Header.Profile = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const { registerModal, openModal } = useModals();
-
-  useEffect(() => {
-    registerModal("login", <LoginModal />);
-    registerModal("signup", <SignUpModal />);
-  }, []);
+  const { openModal } = useModals();
 
   const buttons = [
     {
       title: "Log In",
       onClick: () => {
-        openModal("login");
+        openModal(<LoginModal />);
       },
     },
     {
       title: "Sign Up",
       src: "",
       onClick: () => {
-        openModal("signup");
+        openModal(<SignUpModal />);
       },
     },
   ];

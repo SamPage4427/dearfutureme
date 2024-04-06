@@ -5,15 +5,11 @@ import Button from "../components/button/button";
 
 import { TypeAnimation } from "react-type-animation";
 import { useModals } from "../hooks/use-modal";
-import { useEffect } from "react";
 import { SignUpModal } from "../components/modals";
 
 function MainRoute() {
-  const { registerModal, openModal } = useModals();
+  const { openModal } = useModals();
 
-  useEffect(() => {
-    registerModal("signup", <SignUpModal />);
-  }, []);
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-600 via-blue-300 to-white px-10 py-6">
       <Header className="p-0 flex justify-between border-b-2 border-b-black">
@@ -75,7 +71,7 @@ function MainRoute() {
             title="Sign up"
             size="link"
             onClick={() => {
-              openModal("signup");
+              openModal(<SignUpModal />);
             }}
           />
         </div>

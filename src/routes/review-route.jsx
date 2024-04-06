@@ -2,6 +2,7 @@ import React from "react";
 import { Timeline } from "../components/timeline";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
+import { dummyItems } from "../utils/constants";
 
 function ReviewRoute() {
   return (
@@ -14,7 +15,7 @@ function ReviewRoute() {
       <div className="text-center mt-5">
         <h2 className="text-6xl font-wallpoet">Your Year in Review</h2>
       </div>
-      <Timeline />
+      <Timeline events={dummyItems} />
       <Footer />
     </div>
   );

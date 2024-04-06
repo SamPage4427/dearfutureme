@@ -36,7 +36,8 @@ function LetterRoute() {
         <Form.TextArea
           labelText={"Future Letter"}
           defaultValue={"Dear future me, \r\n"}
-          className={"w-[900px]"}
+          className={"w-[900px] h-[500px]"}
+          maxLength={5000}
           id={"letterContent"}
         />
         <Form.Submit
