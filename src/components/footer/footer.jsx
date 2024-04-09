@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="flex justify-between items-center text-lg font-minaRegular">
       <div className="">All rights reserved. &copy;Sam Page 2024</div>
@@ -25,5 +25,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

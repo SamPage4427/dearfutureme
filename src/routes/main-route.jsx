@@ -1,11 +1,7 @@
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
 import dearFuture from "../images/DearFutureMeImage.png";
-import Button from "../components/button/button";
-
+import { Header, Footer, Button, SignUpModal } from "../components";
 import { TypeAnimation } from "react-type-animation";
 import { useModals } from "../hooks/use-modal";
-import { SignUpModal } from "../components/modals";
 
 function MainRoute() {
   const { openModal } = useModals();

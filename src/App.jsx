@@ -14,9 +14,9 @@ function App() {
           <Route path="/" element={<MainRoute />} />
           <Route path="/letter" element={<LetterRoute />} />
           <Route path="/year-review" element={<ReviewRoute />} />
-          {/* <ProtectedRoute>
+          {/* <ProtectedRoute> */}
           <Route path="/profile" element={<ProfileRoute />} />
-        </ProtectedRoute> */}
+          {/* </ProtectedRoute> */}
         </Routes>
       </BrowserRouter>
     </ModalProvider>

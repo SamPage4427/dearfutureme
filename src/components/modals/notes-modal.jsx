@@ -1,4 +1,4 @@
-import Form from "../form/form";
+import { Form } from "../form/form";
 import Modal from "./modal";
 
 export const NotesModal = () => {

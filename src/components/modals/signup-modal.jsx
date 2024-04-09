@@ -1,6 +1,6 @@
 import Modal from "./modal";
-import Form from "../form/form";
-import Button from "../button/button";
+import { Form } from "../form/form";
+import { Button } from "../button/button";
 import { useModals } from "../../hooks/use-modal";
 import { LoginModal } from "./login-modal";
 

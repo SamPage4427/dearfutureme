@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../components/header/header";
-import Form from "../components/form/form";
-import Footer from "../components/footer/footer";
+import { Header, Form, Footer } from "../components";
 
 function LetterRoute() {
   return (

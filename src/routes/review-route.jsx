@@ -1,7 +1,5 @@
 import React from "react";
-import { Timeline } from "../components/timeline";
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
+import { Timeline, Header, Footer } from "../components";
 import { dummyItems } from "../utils/constants";
 
 function ReviewRoute() {

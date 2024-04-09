@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../button/button";
+import { Button } from "../button/button";
 
-const Form = ({ className, onSubmit, children, ...rest }) => {
+export const Form = ({ className, onSubmit, children, ...rest }) => {
   return (
     <form className={className} onSubmit={onSubmit} {...rest}>
       {children}
@@ -78,5 +78,3 @@ Form.Submit = ({ disabled, className, title, onClick }) => {
     </div>
   );
 };
-
-export default Form;

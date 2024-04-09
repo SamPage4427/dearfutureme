@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-const Button = ({
+export const Button = ({
   className,
   title,
   type = "button",
@@ -33,5 +33,3 @@ const Button = ({
     </button>
   );
 };
-
-export default Button;

@@ -1,5 +1,5 @@
 import { useModals } from "../../hooks/use-modal";
-import TimelinePreviewModal from "../modals/timeline-preview-modal";
+import { TimelinePreviewModal } from "../modals";
 
 export const TimelineCard = ({ title, content, type, eventInfo }) => {
   const { openModal } = useModals();

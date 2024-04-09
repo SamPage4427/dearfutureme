@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BellIcon, BellAlertIcon } from "@heroicons/react/24/outline";
-import Button from "../button/button";
+import { Button } from "../button/button";
 import { useModals } from "../../hooks/use-modal";
-import Modal from "../modals/modal";
-import { LoginModal } from "../modals/login-modal";
-import { SignUpModal } from "../modals/signup-modal";
-import { NotesModal } from "../modals";
+import { LoginModal, SignUpModal, NotesModal } from "../modals";
 
-const Header = ({ className, children, ...rest }) => {
+export const Header = ({ className, children, ...rest }) => {
   return (
     <header className={className} {...rest}>
       <Header.Logo />
@@ -78,7 +75,7 @@ Header.NavLinks = () => {
 };
 
 Header.Profile = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const { openModal } = useModals();
 
   const buttons = [
@@ -114,15 +111,23 @@ Header.Profile = () => {
           ))}
         </div>
       ) : (
-        <Link
-          to="/profile"
-          className="hover:text-slate-500 text-3xl font-minaBold"
-        >
-          Profile
-        </Link>
+        <div className="flex">
+          <Link
+            to="/profile"
+            className="hover:text-slate-500 text-3xl font-minaBold mr-5"
+          >
+            Profile
+          </Link>
+          <Button
+            title={"Logout"}
+            size="link"
+            variant="link"
+            className={
+              "hover:text-slate-500 text-3xl font-minaBold border-none"
+            }
+          />
+        </div>
       )}
     </>
   );
 };
-
-export default Header;
