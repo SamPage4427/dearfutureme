@@ -3,7 +3,7 @@ import { Header, Footer, Button, SignUpModal } from "../components";
 import { TypeAnimation } from "react-type-animation";
 import { useModals } from "../hooks/use-modal";
 
-function MainRoute() {
+export function MainRoute() {
   const { openModal } = useModals();
 
   return (
@@ -76,5 +76,3 @@ function MainRoute() {
     </div>
   );
 }
-
-export default MainRoute;

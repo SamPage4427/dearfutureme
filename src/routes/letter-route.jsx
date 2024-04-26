@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Form, Footer } from "../components";
 
-function LetterRoute() {
+export function LetterRoute() {
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-500 via-blue-300 to-white px-10 py-6">
       <Header className="p-0 flex justify-between border-b-2 border-b-black mb-10">
@@ -47,5 +47,3 @@ function LetterRoute() {
     </div>
   );
 }
-
-export default LetterRoute;
