@@ -11,7 +11,7 @@ export function ProfileRoute() {
         <Header.Profile />
       </Header>
       <div className="flex m-10">
-        <Sidebar />
+        <Sidebar className=" w-60" />
         <ProfilePreviewRoute />
       </div>
       <Footer />

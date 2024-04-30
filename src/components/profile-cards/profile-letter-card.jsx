@@ -11,9 +11,9 @@ export const ProfileLetterCard = ({ title, content }) => {
           {title}
         </h3>
       </div>
-      <div className="inline-block overflow-hidden text-ellipsis max-w-[200px]">
-        <p className="text-lg font-minaRegular text-zinc-700">
-          {content.length > 200 ? `${content.substring(0, 200)}...` : content}
+      <div className="inline-block overflow-hidden text-ellipsis">
+        <p className="text-lg font-minaRegular text-zinc-700 w-[274px]">
+          {content.length > 200 ? `${content.substring(0, 250)}...` : content}
         </p>
       </div>
     </div>

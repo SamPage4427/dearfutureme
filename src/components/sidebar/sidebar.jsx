@@ -12,14 +12,14 @@ export const Sidebar = ({ className, ...rest }) => {
   ];
 
   return (
-    <div className={`flex flex-col mr-10 text-xl font-minaBold ${className}`}>
+    <div className={`flex flex-col mr-10 text-2xl font-minaBold ${className}`}>
       {links.map((link) => {
         return (
           <Link
             to={link.path}
             key={link.name}
             onClick={() => {}}
-            className="mb-6"
+            className="mb-8"
           >
             {link.name}
           </Link>

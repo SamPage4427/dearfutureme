@@ -6,7 +6,7 @@ export const TimelinePreviewModal = ({ date, heading, content }) => {
       <h2 className="text-xl font-minaBold border-b border-b-black mb-2.5 text-center">
         {heading}
       </h2>
-      <p className="font-minaRegular text-md">{content}</p>
+      <p className="font-minaRegular text-md mb-5">{content}</p>
     </Modal>
   );
 };
