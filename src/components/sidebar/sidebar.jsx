@@ -5,9 +5,9 @@ export const Sidebar = ({ className, ...rest }) => {
   const [selected, setSelected] = useState(false);
   const links = [
     { name: "My Profile", path: "/profile", onClick: () => {} },
-    { name: "My Notes", path: "/profile-notes", onClick: () => {} },
-    { name: "My Letters", path: "/profile-letters", onClick: () => {} },
-    { name: "Profile Settings", path: "/profile-settings", onClick: () => {} },
+    { name: "My Notes", path: "/profile/notes", onClick: () => {} },
+    { name: "My Letters", path: "/profile/letters", onClick: () => {} },
+    { name: "Profile Settings", path: "/profile/settings", onClick: () => {} },
     { name: "Logout", onClick: () => {} },
   ];
 

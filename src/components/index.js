@@ -6,3 +6,4 @@ export * from "./modals";
 export * from "./protected-route";
 export * from "./sidebar";
 export * from "./timeline";
+export * from "./profile-cards";

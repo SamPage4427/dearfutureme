@@ -1,5 +1,4 @@
-import { Footer, Header } from "../../components";
-import { Sidebar } from "../../components/sidebar/sidebar";
+import { Header, Footer, Sidebar } from "../../components";
 import { ProfilePreviewRoute } from "./profile-preview-route";
 
 export function ProfileRoute() {
