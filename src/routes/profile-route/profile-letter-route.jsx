@@ -8,7 +8,7 @@ export const ProfileLetterRoute = () => {
         <Header.Profile />
       </Header>
       <div className="flex m-10">
-        <Sidebar />
+        <Sidebar className="w-60" />
         <div className="flex flex-col ml-10 w-full">
           <h2 className="font-minaBold text-4xl mb-7">My Letters:</h2>
           <ProfileLettersCards>
