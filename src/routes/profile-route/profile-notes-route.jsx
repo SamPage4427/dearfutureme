@@ -12,7 +12,10 @@ export const ProfileNotesRoute = () => {
         <Sidebar className=" w-60" />
         <div className="flex flex-col ml-10 w-full">
           <h2 className="font-minaBold text-4xl mb-7">My Notes:</h2>
-          <ProfileNotesCards />
+          {/* will be sorted by date */}
+          <ProfileNotesCards>
+            <ProfileNotesCards.MyNotes />
+          </ProfileNotesCards>
         </div>
       </div>
       <Footer />

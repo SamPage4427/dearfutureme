@@ -19,6 +19,7 @@ export const LoginModal = () => {
           type={"password"}
           className="mb-6"
         />
+        {/* Add remember me and forgot password logic */}
         <Form.Submit
           title={"Sign in"}
           className={"rounded-lg w-[350px] mb-4"}

@@ -1,16 +1,23 @@
 import { ProfileNoteCard } from "./profile-note-card";
 import { dummyItems } from "../../utils/constants";
-import { useMediaQuery } from "usehooks-ts";
+import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 
-export const ProfileNotesCards = () => {
+export const ProfileNotesCards = ({ children }) => {
   // screen size dependent cards. Also should be centered on 4k screens
+  return <>{children}</>;
+};
+
+ProfileNotesCards.Preview = () => {
   const xlScreen = useMediaQuery({
-    query: "(min-width: 1441px)",
+    query: "(min-width: 1942px)",
   });
 
+  const router = useNavigate();
+
   return (
-    <div className="grid grid-cols-3 gap-5">
-      {/* Will need to sort by most recent date and go backward from that */}
+    <div className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}>
+      {/* Will need to sort by most recent date and go backward from that until limit of 3 or 5 depending on screensize reached */}
       {dummyItems.length <= 3
         ? dummyItems.map((item) => (
             <ProfileNoteCard
@@ -20,36 +27,70 @@ export const ProfileNotesCards = () => {
             />
           ))
         : xlScreen
-        ? dummyItems.map((item) => (
-            <ProfileNoteCard
-              key={item.title}
-              title={item.title}
-              content={item.content}
-            />
-          ))
-        : dummyItems
-            .slice(0, 2)
-            .map((item) => (
-              <ProfileNoteCard
-                key={item.title}
-                title={item.title}
-                content={item.content}
-              />
-            ))}
-      {dummyItems.length > 3 ? (
+          ? dummyItems
+              .slice(0, 5)
+              .map((item) => (
+                <ProfileNoteCard
+                  key={item.title}
+                  title={item.title}
+                  content={item.content}
+                />
+              ))
+          : dummyItems
+              .slice(0, 2)
+              .map((item) => (
+                <ProfileNoteCard
+                  key={item.title}
+                  title={item.title}
+                  content={item.content}
+                />
+              ))}
+      {dummyItems.length > 3 && !xlScreen ? (
         <div
           className="flex flex-col justify-center border border-black shadow-md rounded-lg p-6 h-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl text-center"
           onClick={() => {
             // opens notes page
+            router("/profile/notes");
           }}
         >
           <h3 className="text-2xl font-minaBold text-zinc-800 mb-2.5">
             + {dummyItems.length - 2} More
           </h3>
         </div>
+      ) : dummyItems.length > 5 && xlScreen ? (
+        <div
+          className="flex flex-col justify-center border border-black shadow-md rounded-lg p-6 h-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl text-center"
+          onClick={() => {
+            // opens notes page
+            router("/profile/notes");
+          }}
+        >
+          <h3 className="text-2xl font-minaBold text-zinc-800 mb-2.5">
+            + {dummyItems.length - 5} More
+          </h3>
+        </div>
       ) : (
         ""
       )}
+    </div>
+  );
+};
+
+ProfileNotesCards.MyNotes = () => {
+  const xlScreen = useMediaQuery({
+    query: "(min-width: 1942px)",
+  });
+  return (
+    <div className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}>
+      {/* Will need to sort by most recent date and go backward from that */}
+      {/* Possible sort by filter? */}
+      {dummyItems.map((item) => (
+        <ProfileNoteCard
+          key={item.title}
+          title={item.title}
+          content={item.content}
+        />
+      ))}
     </div>
   );
 };
