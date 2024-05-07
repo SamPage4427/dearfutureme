@@ -76,5 +76,18 @@ ProfileLettersCards.Preview = () => {
 };
 
 ProfileLettersCards.MyLetters = () => {
-  return <></>;
+  const xlScreen = useMediaQuery({
+    query: "(min-width: 1942px)",
+  });
+  return (
+    <div className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}>
+      {dummyItems.map((item) => (
+        <ProfileLetterCard
+          key={item.title}
+          title={item.title}
+          content={item.content}
+        />
+      ))}
+    </div>
+  );
 };
