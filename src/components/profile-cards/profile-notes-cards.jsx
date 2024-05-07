@@ -81,16 +81,27 @@ ProfileNotesCards.MyNotes = () => {
     query: "(min-width: 1942px)",
   });
   return (
-    <div className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}>
-      {/* Will need to sort by most recent date and go backward from that */}
-      {/* Possible sort by filter? */}
-      {dummyItems.map((item) => (
-        <ProfileNoteCard
-          key={item.title}
-          title={item.title}
-          content={item.content}
-        />
-      ))}
-    </div>
+    <>
+      {dummyItems.length > 0 ? (
+        <div
+          className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}
+        >
+          {/* Will need to sort by most recent date and go backward from that */}
+          {/* Possible sort by filter? */}
+          {dummyItems.map((item) => (
+            <ProfileNoteCard
+              key={item.title}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
+      ) : (
+        <h2 className="font-minaBold text-4xl mb-7">
+          You do not have any notes
+        </h2>
+        // button to open notes modal
+      )}
+    </>
   );
 };

@@ -58,7 +58,8 @@ export function MainRoute() {
           <h2 className="text-4xl font-tourneyReg mb-5">
             Start writing to your future self today!
           </h2>
-          {/* button for signup if not logged in ? button to write letter which is link to letter page */}
+          {/* button for signup if not logged in : button to write letter which is link to letter page */}
+          {/* Button to write letter will be determined by if user has letters or not */}
           <Button
             variant={"link"}
             className={

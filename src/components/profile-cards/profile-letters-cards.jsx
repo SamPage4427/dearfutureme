@@ -80,14 +80,25 @@ ProfileLettersCards.MyLetters = () => {
     query: "(min-width: 1942px)",
   });
   return (
-    <div className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}>
-      {dummyItems.map((item) => (
-        <ProfileLetterCard
-          key={item.title}
-          title={item.title}
-          content={item.content}
-        />
-      ))}
-    </div>
+    <>
+      {dummyItems.length > 0 ? (
+        <div
+          className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}
+        >
+          {dummyItems.map((item) => (
+            <ProfileLetterCard
+              key={item.title}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
+        </div>
+      ) : (
+        <h2 className="font-minaBold text-4xl mb-7">
+          You have not written any letters
+        </h2>
+        // button that leads to create-letters page
+      )}
+    </>
   );
 };
