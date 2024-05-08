@@ -6,6 +6,7 @@ import {
   MainRoute,
   ProfileNotesRoute,
   ProfileLetterRoute,
+  ProfileSettingsRoute,
 } from "./routes";
 import { ModalProvider } from "./contexts/modal";
 // import ProtectedRoute from "./components/protected-route";
@@ -26,6 +27,9 @@ function App() {
           {/* </ProtectedRoute> */}
           {/* <ProtectedRoute> */}
           <Route path="/profile/letters" element={<ProfileLetterRoute />} />
+          {/* </ProtectedRoute> */}
+          {/* <ProtectedRoute> */}
+          <Route path="/profile/settings" element={<ProfileSettingsRoute />} />
           {/* </ProtectedRoute> */}
         </Routes>
       </BrowserRouter>
