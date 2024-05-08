@@ -15,7 +15,6 @@ export const Button = ({
       onClick={onClick}
       type={type}
       className={cx(
-        "",
         !disabled &&
           variant === "submit" &&
           "bg-blue-600 text-white font-minaBold text-xl",
@@ -27,7 +26,8 @@ export const Button = ({
         disabled && variant === "disabled" && "bg-slate-200 text-black",
         size === "md" && "p-4",
         size === "sm" && "p-2.5",
-        size === "lg" && "py-4 w-full",
+        size === "lg" && "py-4 w-80",
+        size === "xl" && "py-4 w-full",
         size === "link" && "p-0",
         className,
       )}

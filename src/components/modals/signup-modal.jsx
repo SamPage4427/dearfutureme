@@ -13,16 +13,20 @@ export const SignUpModal = () => {
         className={"flex flex-col items-center justify-center my-7"}
         onSubmit={() => {}}
       >
-        <Form.TextInput labelText={"Email:"} type={"email"} className="mb-5" />
+        <Form.TextInput
+          labelText={"Email:"}
+          type={"email"}
+          className="mb-5 w-[350px]"
+        />
         <Form.TextInput
           labelText={"Password:"}
           type={"password"}
-          className="mb-5"
+          className="mb-5 w-[350px]"
         />
         <Form.TextInput
           labelText={"Confirm Password:"}
           type={"password"}
-          className={"mb-6"}
+          className={"mb-6 w-[350px]"}
         />
 
         <Form.Submit

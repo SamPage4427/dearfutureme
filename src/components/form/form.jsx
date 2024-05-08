@@ -19,7 +19,7 @@ Form.TextInput = ({
   ...rest
 }) => {
   return (
-    <div className="font-minaRegular flex flex-col w-[350px]">
+    <div className="font-minaRegular flex flex-col">
       <label htmlFor={id} className="text-2xl">
         {labelText}
       </label>

@@ -13,11 +13,15 @@ export const LoginModal = () => {
         className={"flex flex-col items-center justify-center my-7"}
         onSubmit={() => {}}
       >
-        <Form.TextInput labelText={"Email"} type={"email"} className="mb-5" />
+        <Form.TextInput
+          labelText={"Email"}
+          type={"email"}
+          className="mb-5 w-[350px]"
+        />
         <Form.TextInput
           labelText={"Password"}
           type={"password"}
-          className="mb-6"
+          className="mb-6 w-[350px]"
         />
         {/* Add remember me and forgot password logic */}
         <Form.Submit

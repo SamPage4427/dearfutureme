@@ -18,7 +18,7 @@ ProfileNotesCards.Preview = () => {
 
   return (
     <>
-      {dummyItems > 0 ? (
+      {dummyItems.length > 0 ? (
         <div
           className={`grid gap-5 ${xlScreen ? "grid-cols-6" : "grid-cols-3"}`}
         >

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { TimelineCard } from "./timeline-card";
+import { SentimentVeryDissatisfied } from "@mui/icons-material";
 
 export const Timeline = ({ events }) => {
   return (
@@ -44,8 +45,9 @@ export const Timeline = ({ events }) => {
           <Timeline.Circle />
         </div>
       ) : (
-        <div className="text-4xl font-tourneyItalic text-center mt-9">
-          You have not created anything yet
+        <div className="text-4xl font-tourneyItalic text-center m-9">
+          You have not created anything yet{" "}
+          <SentimentVeryDissatisfied fontSize="large" />
         </div>
       )}
     </>

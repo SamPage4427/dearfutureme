@@ -7,10 +7,15 @@ import { LoginModal, SignUpModal, NotesModal } from "../modals";
 
 export const Header = ({ className, children, ...rest }) => {
   return (
-    <header className={className} {...rest}>
-      <Header.Logo />
-      <Header.NavLinks />
-      <Header.Profile />
+    <header
+      className={`fixed top-0 right-0 left-0 mx-auto px-10 py-6 bg-gradient-to-br from-blue-600 to-blue-300 bg-opacity-100 border-b-2 border-b-black ${className}`}
+      {...rest}
+    >
+      <div className="p-0 flex justify-between">
+        <Header.Logo />
+        <Header.NavLinks />
+        <Header.Profile />
+      </div>
     </header>
   );
 };

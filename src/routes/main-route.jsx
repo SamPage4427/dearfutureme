@@ -8,13 +8,13 @@ export function MainRoute() {
 
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-600 via-blue-300 to-white px-10 py-6">
-      <Header className="p-0 flex justify-between border-b-2 border-b-black">
+      <Header>
         <Header.Logo />
         <Header.NavLinks />
         <Header.Profile />
       </Header>
       {/* body of the main page description/test of the website */}
-      <div className="text-center text-black my-10">
+      <div className="text-center text-black mt-16 mb-10">
         <h1 className="text-8xl font-wallpoet">
           <TypeAnimation
             sequence={["Dear Future Me", 3000]}
@@ -73,7 +73,7 @@ export function MainRoute() {
           />
         </div>
       </div>
-      <Footer />
+      <Footer className={"fixed bottom-0 right-1 left-1"} />
     </div>
   );
 }
