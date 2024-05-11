@@ -1,7 +1,10 @@
 import React from "react";
-import { Header, Form, Footer } from "../components";
+import { Header, Form, Footer, Button } from "../components";
+import { useNavigate } from "react-router-dom";
 
 export function LetterRoute() {
+  const router = useNavigate();
+
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-600 via-blue-300 to-white px-10 py-6">
       <Header>
@@ -9,7 +12,7 @@ export function LetterRoute() {
         <Header.NavLinks />
         <Header.Profile />
       </Header>
-      <div className="flex flex-col text-center items-center mt-16">
+      <div className="relative flex flex-col text-center items-center mt-16">
         <h2 className="p-2 text-6xl font-tourneyItalic text-transparent bg-clip-text bg-gradient-to-br from-black via-stone-700 to-black">
           Write your future!
         </h2>
@@ -18,6 +21,13 @@ export function LetterRoute() {
           accomplishments, etc that you want to happen before your future self
           receives the letter.
         </p>
+        {/* Based on condition that user is logged in and that they have letters in the database */}
+        {/* <Button
+          title={"View all letters"}
+          onClick={() => router("/profile/letters")}
+          variant="link"
+          className={"absolute right-3 top-2 text-2xl font-minaRegular"}
+        /> */}
       </div>
       <Form className="flex flex-col items-center mt-6 mb-24">
         <div className="flex flex-row justify-between w-[900px] mb-5">
@@ -38,7 +48,7 @@ export function LetterRoute() {
           />
         </div>
         <Form.TextArea
-          labelText={"Future Letter"}
+          labelText={"Letter"}
           defaultValue={"Dear future me, \r\n"}
           className={"w-[900px] h-[500px]"}
           maxLength={5000}

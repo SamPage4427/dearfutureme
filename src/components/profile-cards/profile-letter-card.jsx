@@ -1,7 +1,7 @@
 export const ProfileLetterCard = ({ title, content }) => {
   return (
     <div
-      className="flex flex-col border border-black shadow-md rounded-lg p-6 h-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl"
+      className="flex flex-col border border-black shadow-md rounded-lg p-6 max-h-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl max-w-[400px]"
       onClick={() => {
         // opens modal for note preview or notes page is show more card is clicked
       }}
@@ -12,7 +12,7 @@ export const ProfileLetterCard = ({ title, content }) => {
         </h3>
       </div>
       <div className="inline-block overflow-hidden text-ellipsis">
-        <p className="text-lg font-minaRegular text-zinc-700 w-[274px]">
+        <p className="text-lg font-minaRegular text-zinc-700">
           {content.length > 200 ? `${content.substring(0, 250)}...` : content}
         </p>
       </div>

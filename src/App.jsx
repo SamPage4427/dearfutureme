@@ -5,7 +5,7 @@ import {
   LetterRoute,
   MainRoute,
   ProfileNotesRoute,
-  ProfileLetterRoute,
+  ProfileLettersRoute,
   ProfileSettingsRoute,
 } from "./routes";
 import { ModalProvider } from "./contexts/modal";
@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainRoute />} />
           <Route path="/letter" element={<LetterRoute />} />
+          {/* Another route to show full letter based off the letter id */}
           <Route path="/year-review" element={<ReviewRoute />} />
           {/* <ProtectedRoute> */}
           <Route path="/profile" element={<ProfileRoute />} />
@@ -26,7 +27,7 @@ function App() {
           <Route path="/profile/notes" element={<ProfileNotesRoute />} />
           {/* </ProtectedRoute> */}
           {/* <ProtectedRoute> */}
-          <Route path="/profile/letters" element={<ProfileLetterRoute />} />
+          <Route path="/profile/letters" element={<ProfileLettersRoute />} />
           {/* </ProtectedRoute> */}
           {/* <ProtectedRoute> */}
           <Route path="/profile/settings" element={<ProfileSettingsRoute />} />

@@ -1,5 +1,5 @@
 import { Header, Footer, Sidebar, ProfileLettersCards } from "../../components";
-export const ProfileLetterRoute = () => {
+export const ProfileLettersRoute = () => {
   return (
     <div className="max-w-full min-h-screen bg-gradient-to-br from-blue-600 via-blue-300 to-white px-10 py-6">
       <Header>

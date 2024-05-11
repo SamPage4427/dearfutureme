@@ -51,7 +51,7 @@ ProfileLettersCards.Preview = () => {
                   ))}
           {dummyItems.length > 3 && !xlScreen ? (
             <div
-              className="flex flex-col justify-center border border-black shadow-md rounded-lg p-6 h-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl text-center"
+              className="flex flex-col justify-center border border-black shadow-md rounded-lg p-6 max-h-[400px] max-w-[400px] transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl text-center"
               onClick={() => {
                 // opens letters page
                 router("/profile/letters");
