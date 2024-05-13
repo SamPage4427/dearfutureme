@@ -20,18 +20,42 @@ function App() {
           <Route path="/letter" element={<LetterRoute />} />
           {/* Another route to show full letter based off the letter id */}
           <Route path="/year-review" element={<ReviewRoute />} />
-          {/* <ProtectedRoute> */}
-          <Route path="/profile" element={<ProfileRoute />} />
-          {/* </ProtectedRoute> */}
-          {/* <ProtectedRoute> */}
-          <Route path="/profile/notes" element={<ProfileNotesRoute />} />
-          {/* </ProtectedRoute> */}
-          {/* <ProtectedRoute> */}
-          <Route path="/profile/letters" element={<ProfileLettersRoute />} />
-          {/* </ProtectedRoute> */}
-          {/* <ProtectedRoute> */}
-          <Route path="/profile/settings" element={<ProfileSettingsRoute />} />
-          {/* </ProtectedRoute> */}
+          <Route
+            path="/profile"
+            element={
+              // <ProtectedRoute>
+              <ProfileRoute />
+              // </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile/notes"
+            element={
+              // <ProtectedRoute>
+              <ProfileNotesRoute />
+              // </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile/letters"
+            element={
+              // <ProtectedRoute>
+              <ProfileLettersRoute />
+              // </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile/settings"
+            element={
+              // <ProtectedRoute>
+              <ProfileSettingsRoute />
+              // </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/letters/:letterId"
+            // element={<ProtectedRoute></ProtectedRoute>}
+          />
         </Routes>
       </BrowserRouter>
     </ModalProvider>

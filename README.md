@@ -14,7 +14,7 @@ This application allows users to:
 ## Tech Stack
 | - | Frontend | Backend |
 | --------- | --------- | --------- |
-| Languages | React/Vite | Express.js/Node |
+| Languages | React/Vite/Tailwind | Express.js/Node |
 | Platform/APIs | Postman | MongoDB |
 
 ## Links
