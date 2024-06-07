@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { BellIcon, BellAlertIcon } from "@heroicons/react/24/outline";
 import { Button } from "../button/button";
 import { useModals } from "../../hooks/use-modal";
 import { LoginModal, SignUpModal, NotesModal } from "../modals";
+import { NotificationPopover } from "../popovers/notification-popover";
 
 export const Header = ({ className, children, ...rest }) => {
   return (
@@ -73,7 +73,7 @@ Header.NavLinks = () => {
           </Link>
         );
       })}
-      <BellIcon className="w-8 h-8 hover:text-slate-500" />
+      <NotificationPopover />
       {/* <BellAlertIcon className="w-8 h-8 hover:text-slate-500" /> */}
     </nav>
   );
