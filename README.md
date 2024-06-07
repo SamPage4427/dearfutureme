@@ -15,6 +15,6 @@ This application allows users to:
 | - | Frontend | Backend |
 | --------- | --------- | --------- |
 | Languages | React/Vite/Tailwind | Express.js/Node |
-| Platform/APIs | Postman | MongoDB |
+| Platform/APIs | | Postman, MongoDB |
 
 ## Links
